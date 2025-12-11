@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vinod Jangid, a CSIR-NET qualified (AIR 46) Computational Biologist specializing in Structural Biology, MD Simulations, drug discovery, and AI-driven genomic solutions.">
+    <meta name="keywords" content="Computational Biologist, Structural Biology, MD Simulations, AlphaFold, GROMACS, NGS Analysis, Drug Discovery, AI-ML in Genomics, Python, R, Molecular Modeling, Network Pharmacology">
+    <meta name="author" content="Vinod Jangid">
+    <title>Vinod Jangid - Computational Biologist</title>
+    <link rel="icon" href="assets/img/" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        /* MEDIA QUERY:
+           This ensures the 2-column layout only applies to screens wider than 768px 
+           (Tablets, Laptops, Desktops). On mobile, it remains 1 column.
+        */
+        @media screen and (min-width: 768px) {
+            .qualification__content,
+            .publications__wrapper,
+            .project__wrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr) !important; 
+                gap: 2rem; /* Space between columns */
+                align-items: start; /* Prevents cards from stretching vertically */
+            }
+
+            /* Ensures project images fit perfectly inside the new grid columns */
+            .project__img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="nav__brand">
+                   Vinod<Span>Jangid</Span>
+                </a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#qualification" class="nav__link">Qualification</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#publications" class="nav__link">Publications</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link">Projects</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact"  class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__toggle">
+                    <i id="nav-toggle" class="ri-menu-3-line"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section id="home" class="home">
+            <div class="container">
+                <div class="d-grid home__wrapper">
+                    <div class="home__content">
+                        <h1 class="home__title">Hi, I am Vinod,<br>Computational Biologist.</h1>
+                        <p class="home__description">I am a CSIR-NET qualified researcher specializing in Structural Biology and MD Simulations. I am passionate to integrating AI-ML pipelines and developing bioinformatics workflows to support impactful research in drug discovery and genomics. 
+                        </p>
+                        <div class="home__info">
+                            <div class="home__info-wrapper">
+                                <p class="home__info-number">03+</p>
+                                <h2 class="home__info-title">Years<br>Experience</h2>
+                            </div>
+                            <div class="home__info-wrapper">
+                                <p class="home__info-number">35+</p>
+                                <h2 class="home__info-title">Projects<br>Completed</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/img/home.png" alt="home.png" class="home__img">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">About Me</h2>
+                    <span class="section__subtitle">Who am I</span>
+                </div>
+                <div class="d-grid about__wrapper">
+                    <div class="about__content">
+                        <h3 class="about__title">I'm a CSIR-NET Qualified Computational Biologist</h3>
+                        <p class="about__description">
+                            Specializing in Structural Biology, Molecular Dynamics (MD) Simulations, and Machine Learning for drug discovery, I have a proven track record in rational drug design, analyzing protein-ligand interactions, and conducting free energy calculations. My expertise extends to developing automated Python/Bash pipelines for macromolecular modeling and identifying novel therapeutic targets through high-throughput data analysis. I am driven by a commitment to excellence and continually strive to optimize pipelines for high-impact results.
+                        </p>
+                    </div>
+                    <div class="skills">
+                        <h3 class="skills__title">Technologies I've been working with:</h3>
+                        <div class="skills__wrapper">
+                            <div class="skills__content">
+                                <h4 class="skills__subtitle">Structural Biology & MD</h4>
+                                <ul class="skills__list">
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i> AlphaFold, ESMfold, Rosetta</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i> GROMACS, AMBER</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i> Free Energy Calculations</li>
+                                </ul>
+                            </div>
+                            <div class="skills__content">
+                                <h4 class="skills__subtitle">Programming & CADD</h4>
+                                <ul class="skills__list">
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i> Python, Bash</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i> AutoDock, Schrödinger</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i> ML for Drug Discovery</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="qualification" class="section qualification">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Qualification</h2>
+                    <span class="section__subtitle">Experience & Education</span>
+                </div>
+                
+                <div class="qualification__wrapper">
+                    <h3 class="qualification__name">
+                        <i class="ri-briefcase-fill"></i>
+                        Professional Experience
+                    </h3>
+                    <div class="d-grid qualification__content">
+                         <div class="qualification__item">
+                            <h3 class="qualification__title">Computational Biologist</h3>
+                            <p class="qualification__description">Freelance | Jan 2025 - Present </p>
+                            <span class="qualification__date">Conducted molecular docking, MD simulations, and free energy calculations. Developed custom bioinformatics workflows for genomic data.</span>
+                        </div>
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Research Associate</h3>
+                            <p class="qualification__description">Growdea Technologies | Apr 2024 - Dec 2024 </p>
+                            <span class="qualification__date">Designed and implemented bioinformatics and AI/ML workflows while collaborating on enhancing RNA-seq analysis pipelines and advancing molecular modeling.</span>
+                        </div>
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Bioinformatician</h3>
+                            <p class="qualification__description">Growdea Technologies | Apr 2023 - Mar 2024 </p>
+                            <span class="qualification__date">Conducted molecular docking, dynamics, QSAR, and RNAseq analysis to support drug discovery. Executed high-throughput screening of 10,000+ molecules.</span>
+                        </div>
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Project Intern</h3>
+                            <p class="qualification__description">Indian Institute of Science | Jan 2022 - Jun 2022 </p>
+                            <span class="qualification__date">Conducted end-to-end RNA-Seq workflows (QC → alignment → DE analysis). Analyzed differentially expressed genes using GO and KEGG pathway enrichment.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="qualification__wrapper">
+                    <h3 class="qualification__name">
+                        <i class="ri-booklet-fill"></i>
+                        Education
+                    </h3>
+                    <div class="d-grid qualification__content">
+                        <div class="qualification__item">
+                            <h3 class="qualification__title"> Master of Science in Bioinformatics</h3>
+                            <p class="qualification__description">Bharathiar University, Coimbatore | 2020 - 2022
+                            </p>
+                        </div>
+                        <div class="qualification__item">
+                            <h3 class="qualification__title"> Bachelor of Science in Biotechnology</h3>
+                            <p class="qualification__description">Mohanlal Sukhadia University, Udaipur | 2017 - 202
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="qualification__wrapper">
+                    <h3 class="qualification__name">
+                        <i class="ri-award-fill"></i>
+                        Certifications
+                    </h3>
+                    <div class="d-grid qualification__content">
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">CSIR-UGC NET (Life Sciences)</h3>
+                            <p class="qualification__description">All India Rank 46 (Lectureship) | June 2025</p>
+                        </div>
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Genomic Data Science</h3>
+                            <p class="qualification__description">Johns Hopkins University | Dec 2024</p>
+                        </div>
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Computer-Aided Drug Design</h3>
+                            <p class="qualification__description">NPTEL, IIT Madras | Sep 2021</p>
+                        </div>
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Human Molecular Genetics</h3>
+                            <p class="qualification__description">NPTEL, IIT Kanpur | March 2021</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="qualification__footer">
+                    <p class="qualification__footer-text">See my resume</p>
+                    <a href="./assets/files/resume_Vinod-Jangid.pdf" download class="btn btn--primary">Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section publications">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Publications</h2>
+                    <span class="section__subtitle">Research & Contributions</span>
+                </div>
+                <div class="d-grid publications__wrapper">
+                    <div class="publications__item">
+                        <h3 class="publications__title">
+                            <a href="https://bit.ly/48RRRWj" target="_blank">Machine Learning Optimization Approach to Design Multi-Epitope Marburg Vaccine Construct</a>
+                        </h3>
+                        <p class="publications__authors">Shreyansh Suyash, Wajihul Hasan Khan, Priyasha Maitra, <strong>Vinod Jangid</strong>, Parveen Punia and Avinash Mishra</p>
+                        <p class="publications__journal">Biotech Res Asia, 2024; 21(4).</p>
+                    </div>
+                    <div class="publications__item">
+                        <h3 class="publications__title">
+                            <a href="https://doi.org/10.47852/bonviewMEDIN42023732" target="_blank">Computational Analysis to Identify Novel Drug Targets for Esophageal Cancer</a>
+                        </h3>                        <p class="publications__authors"><strong>Vinod Jangid</strong>, Chandrasekar Narayanan Rahul, B Aarthi Rashmi and Kanagaraj Sekar</p>
+                        <p class="publications__journal">Medinformatics, 2024.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section project">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Projects</h2>
+                    <span class="section__subtitle">My recent work</span>
+                </div>
+                <div class="d-grid project__wrapper">
+                    <div class="project__content">
+                        <img src="assets/img/small-molecules-screening.png" alt="Small Molecules Screening" class="project__img" onclick="openPopup('assets/img/small-molecules-screening.png')">
+                        <h3 class="project__title">Small Molecules Screening</h3>
+                        <p class="project__description">A detailed workflow for small molecules screening, showcasing the integration of QSAR analysis, docking studies, and molecular dynamics simulations.</p>
+                    </div>
+                    <div class="project__content">
+                        <img src="assets/img/qsar.png" alt="QSAR Analysis" class="project__img" onclick="openPopup('assets/img/qsar.png')">
+                        <h3 class="project__title">QSAR Analysis</h3>
+                        <p class="project__description">Explore a comprehensive QSAR (Quantitative Structure-Activity Relationship) workflow, designed to predict and optimize molecular activity with precision.</p>
+                    </div>					
+                    <div class="project__content">
+                        <img src="assets/img/thermal-stabilization.png" alt="Thermal Stabilization Analysis" class="project__img" onclick="openPopup('assets/img/thermal-stabilization.png')">
+                        <h3 class="project__title">Thermal Stabilization Analysis</h3>
+                        <p class="project__description">Comprehensive analysis of thermal stability for enzymes using Temperature-Targeted Molecular Dynamics, identifying hotspots and optimizing protein flexibility under varying conditions.</p>
+                    </div>
+                    <div class="project__content">
+                        <img src="assets/img/network_based_drug_discovery.png" alt="Network-Based Drug Discovery" class="project__img" onclick="openPopup('assets/img/network_based_drug_discovery.png')">
+                        <h3 class="project__title">Network-Based Drug Discovery</h3>
+                        <p class="project__description">Utilized network pharmacology to identify synergistic drug combinations for infectious and chronic diseases, applying computational analysis to repurpose FDA-approved drugs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+		<div id="popup" class="popup">
+			<span class="close" onclick="closePopup()">&times;</span>
+			<img id="popup-img" class="popup-img" src="" alt="Project Image">
+		</div>
+
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="d-grid contact__wrapper">
+                    <div class="contact__content">
+                        <h2 class="contact__title">Let's Collaborate on Your Next Project</h2>
+                        <p class="contact__description">
+                            Feel free to reach out if you're interested in discussing a project or collaboration. Whether you have a specific project in mind or just want to chat, I'm here to help.
+                        </p>
+                    </div>
+                    <div class="contact__btn">
+                        <a href="#contact" class="btn btn--secondary">Get in touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="d-grid footer__wrapper">
+                <div class="footer__content">
+                    <h4 class="footer__title">Follow Me</h4>
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a href="https://wa.me/918209096910?text=Hi%20Vinod,%20I’d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" class="footer__social-link">
+                                <i class="ri-whatsapp-fill"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="https://www.linkedin.com/in/vinodjangidjdr/" target="_blank" class="footer__social-link">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="https://x.com/vinodjangidjdr" target="_blank" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h4 class="footer__title">Email Me</h4>
+                    <a href="mailto:vinodjangid.jdr@gmail.com" class="footer__contact">vinodjangid.jdr@gmail.com</a>
+                </div>
+            </div>
+            <p class="footer__copyright">&copy; 2025 Vinod Jangid. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
