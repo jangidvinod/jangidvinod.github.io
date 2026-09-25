@@ -1,11 +1,9 @@
-// main.js - Vinod Jangid Portfolio
-
+/* main.js */
 (function () {
   "use strict";
 
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // DOM references
   var header = document.getElementById("header");
   var navMenu = document.getElementById("nav-menu");
   var navToggle = document.getElementById("nav-toggle");
@@ -17,7 +15,6 @@
   var sections = document.querySelectorAll(".section, .hero");
   var lastActiveElement = null;
 
-  // Mobile navigation
   function toggleMenu() {
     if (!navMenu || !navToggle) return;
     var isOpen = navMenu.classList.toggle("open");
@@ -43,7 +40,6 @@
     });
   });
 
-  // Header scroll effect and active nav
   var scrollTicking = false;
 
   function onScroll() {
@@ -87,7 +83,6 @@
     });
   }
 
-  // Scroll reveal with IntersectionObserver
   var revealElements = document.querySelectorAll(".reveal");
 
   if ("IntersectionObserver" in window) {
@@ -105,7 +100,6 @@
     revealElements.forEach(function (el) { el.classList.add("revealed"); });
   }
 
-  // Animated counters
   var statNumbers = document.querySelectorAll(".hero__stat-number[data-target]");
 
   function animateCounter(el) {
@@ -146,6 +140,13 @@
         });
       }, { threshold: 0.5 });
       statNumbers.forEach(function (el) { counterObserver.observe(el); });
+      statNumbers.forEach(function (el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight) {
+          animateCounter(el);
+          counterObserver.unobserve(el);
+        }
+      });
     } else {
       statNumbers.forEach(function (el) {
         var target = parseInt(el.dataset.target, 10);
@@ -157,7 +158,6 @@
     }
   }
 
-  // Lightbox
   var projectCards = document.querySelectorAll("[data-lightbox]");
 
   function openLightbox(src, altText, triggerEl) {
@@ -224,7 +224,6 @@
     }
   });
 
-  // Hero canvas animation
   if (heroCanvas && !prefersReducedMotion) {
     var ctx = heroCanvas.getContext("2d");
     var parent = heroCanvas.parentElement;
@@ -377,7 +376,6 @@
     });
   }
 
-  // Smooth scroll with header offset
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {
       var targetId = this.getAttribute("href");
@@ -404,6 +402,8 @@
     });
   });
 
-  // Init
+  var copyYear = document.querySelector(".footer__copy-year");
+  if (copyYear) copyYear.textContent = new Date().getFullYear();
+
   updateActiveNav();
 })();
